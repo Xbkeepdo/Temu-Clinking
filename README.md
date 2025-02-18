@@ -1,0 +1,2 @@
+# Temu-Clinking
+manage-product
