@@ -1,0 +1,52 @@
+server:
+  port: 8889
+  #  ssl:
+  #    key-store: classpath:key.jks
+  #    key-store-password: Ik4&DvKhkgwZXdGW
+  #    key-store-type: JKS
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: clinking
+    password: 991117
+
+    url: jdbc:mysql://8.146.200.102:3306/clinking?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&rewriteBatchedStatements=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    #url: jdbc:mysql://8.146.200.102:3306/clinkingDev?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&rewriteBatchedStatements=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    type: com.alibaba.druid.pool.DruidDataSource
+  jackson:
+    time-zone: Asia/Shanghai
+  transaction:
+    manager-enabled: true
+
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: clinking
+#    password: 991117
+#
+#    url: jdbc:mysql://8.146.200.102:3306/clinking?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&rewriteBatchedStatements=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+#    type: com.alibaba.druid.pool.DruidDataSource
+#  jackson:
+#    time-zone: Asia/Shanghai
+#
+#  transaction:
+#    manager-enabled: true
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto #idauto-increment
+  configuration:
+    map-underscore-to-camel-case: false # 开启驼峰功能
+    auto-mapping-behavior: full # 自动映射任何复杂的结果
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    page-helper: true
+
+
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+merImagesFilePath: /root/Clinking/Image/Mer/
+#merImagesFilePath: C://Users/汽水//Desktop/
